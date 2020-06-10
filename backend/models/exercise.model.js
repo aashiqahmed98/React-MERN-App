@@ -16,7 +16,7 @@ const exerciseSchema = new Schema(
       type: Number,
       required: true,
     },
-    data: {
+    date: {
       type: Date,
       required: true,
     },
