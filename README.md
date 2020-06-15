@@ -6,15 +6,15 @@ We've used Node and Mongodb for backend with Express and cors as middleware fram
 
 ## Dependencies
 
-    _ React-Router-Dom _
-    _ Cors _
-    _Mongoose_
-    _Express_
-    _Datepicker_
-    _React-Bootstrap_
-    _axios_
+    React-Router-Dom
+    Cors
+    Mongoose
+    Express
+    Datepicker
+    React-Bootstrap
+    axios(--save)
 
-    Kindly install the neccessay dependencies/packages
+             Kindly install the neccessay dependencies/packages
 
 ## Available Scripts
 
