@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
-// Want to install a npm package calle 'Date-picker'
+// Want to install a npm package called 'Date-picker'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
+import axios from "axios";
 
 class CreateExercise extends Component {
   constructor(props) {
@@ -29,10 +31,19 @@ class CreateExercise extends Component {
   // At the time of every refresh/reload
 
   componentDidMount() {
-    this.setState({
-      users: ["test user1", "test user2"],
-      username: "test user",
-    });
+    axios
+      .get("http://localhost:5200/users/")
+      .then((response) => {
+        if (response.data.length > 0) {
+          this.setState({
+            users: response.data.map((user) => user.username),
+            username: response.data[0].username,
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   //   e=>event
@@ -67,12 +78,17 @@ class CreateExercise extends Component {
       date: this.state.date,
     };
     console.log("Excerise log: ", exercise);
-    // window.location = "/";
+
+    axios
+      .post("http://localhost:5200/exercises/add", exercise)
+      // res means result
+      .then((res) => console.log(res.data));
+    window.location = "/";
   };
   render() {
     return (
       <div>
-        <h3>Create New Exercise Log</h3>
+        <h3>Create New Exercise</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>Username: </label>
