@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 // Want to install a npm package called 'Date-picker'
 import DatePicker from "react-datepicker";
@@ -48,7 +49,7 @@ class CreateExercise extends Component {
 
   //   e=>event
   onChangeUsername = (e) => {
-    console.log(e);
+    // console.log(e);
     this.setState({
       username: e.target.value,
     });
@@ -142,7 +143,10 @@ class CreateExercise extends Component {
               type="submit"
               value="Create Exercise"
               className="btn btn-primary"
-            />
+            />{" "}
+            <Link to="/">
+              <input value="Go Back" className="btn btn-dark" />
+            </Link>
           </div>
         </form>
       </div>

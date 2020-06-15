@@ -86,8 +86,6 @@ export default class EditExercise extends Component {
       date: this.state.date,
     };
 
-    console.log(exercise);
-
     axios
       .post(
         "http://localhost:5200/exercises/update/" + this.props.match.params.id,
@@ -95,7 +93,8 @@ export default class EditExercise extends Component {
       )
       .then((res) => console.log(res.data));
 
-        window.location = "/";
+    window.location = "/";
+    console.log("Edited Exercise: ", exercise);
   };
 
   render() {
