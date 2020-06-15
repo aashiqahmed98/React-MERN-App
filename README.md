@@ -6,8 +6,8 @@ We've used Node and Mongodb for backend with Express and cors as middleware fram
 
 ## Dependencies
 
-    _React-Router-Dom_
-    _Cors_
+    _ React-Router-Dom _
+    _ Cors _
     _Mongoose_
     _Express_
     _Datepicker_
