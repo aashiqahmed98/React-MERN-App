@@ -7,16 +7,3 @@ We've used Node and Mongodb for backend with Express and cors as middleware fram
 ## About the Project 
 
 A Tracker application of exercises of users.Maintaining a list of users and manipulating(create,read,update,delete).
-
-## Dependencies Used
-
-    React-Router-Dom
-    Cors
-    Mongoose
-    Express
-    Datepicker
-    React-Bootstrap
-    axios(--save)
-
-             Kindly install the neccessay dependencies/packages by using `npx install`
-          
